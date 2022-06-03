@@ -1,0 +1,23 @@
+﻿
+<h1>Do the following steps</h1>
+<ul>
+    <li>Change the database connection string</li>
+    <li>open Tools-->Nuget-->Package Manager Console then run below commands</li>
+    <li>enable-migrations -ContextTypeName WebAPIOWIN.OwinAuthDbContext</li>
+    <li>Add-Migration Initial</li>
+    <li>Update-Database</li>
+    <li>Insert below reocrd</li>
+    <li>
+        INSERT [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp],
+        [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled],
+        [AccessFailedCount], [UserName])
+        VALUES (N'9f15bdd0fcd5423190c2e877ba0228ee', N'Tester@testing.com', 1,
+        N'ALkHGax/i5KBYWJ7q4jhJmMKmm2quBtnnqS8KcmLWd2kQpN6FaGVulDmmX12s7YAyQ==',
+        N'a7bc5c5c-6169-4911-b935-6fc4df01d313', NULL, 0, 0, NULL, 0, 0, N'Adam')
+    </li>
+</ul>
+<br />
+<h2>Get the access token</h2>
+<img src="~/Getting the Access Token.PNG" height="90%" width="90%" />
+<h2>Testing the authentication on Controller</h2>
+<img src="~/Testing the controller.png"  height="90%" width="90%" />
