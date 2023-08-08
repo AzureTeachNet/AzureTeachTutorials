@@ -1,0 +1,57 @@
+<div style="margin:auto;width:60%">
+    <mat-card>
+        <mat-card-title style="text-align: center;">User Information</mat-card-title>
+        <mat-card-content>
+            <div style="display: inline-block;">
+                <mat-list style="max-width: 50vw;">
+                    <mat-divider [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">User Name:</div>
+                        <div class="list-item-content">
+                            {{profile?.userPrincipalName}}
+                        </div>
+                    </mat-list-item>
+                    <mat-divider  [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">First Name:</div>
+                        <div class="list-item-content">
+                            {{profile?.givenName}}
+                        </div>
+                    </mat-list-item>
+                    <mat-divider  [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">Last Name:</div>
+                        <div class="list-item-content">
+                            {{profile?.surname}}
+                        </div>
+                    </mat-list-item><mat-divider  [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">Job Title:</div>
+                        <div class="list-item-content">
+                            {{profile?.jobTitle}}
+                        </div>
+                    </mat-list-item><mat-divider  [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">Phone Number:</div>
+                        <div class="list-item-content">
+                            {{profile?.mobilePhone}}
+                        </div>
+                    </mat-list-item><mat-divider  [inset]="true"></mat-divider>
+                    <mat-list-item>
+                        <div class="list-item-title">Email:</div>
+                        <div class="list-item-content">
+                            {{profile?.mail}}
+                        </div>
+                    </mat-list-item>
+                    </mat-list>
+            </div>
+            <div style="display: inline-block;">
+            <mat-card>
+                <mat-card-content>
+                   <img [src]="profilePic" height="250px" width="250px"/>
+                </mat-card-content>
+            </mat-card>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

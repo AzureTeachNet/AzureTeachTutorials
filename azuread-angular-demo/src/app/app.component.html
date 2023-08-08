@@ -1,0 +1,11 @@
+<mat-toolbar class="mat-elevation-z4" color="primary">
+  <a href="/" class="title">AzureTeach.Net</a>
+<div class="toolbar-spacer"></div>
+  <span style="padding:10px;">Welcome {{userName}}!</span>
+  <a mat-button [routerLink]="['profile']">Profile</a>
+  <a mat-button [routerLink]="['reports']">Reports</a>
+  <button mat-raised-button *ngIf="!isUserLoggedIn" (click)="login()">Login</button>
+  <button mat-raised-button *ngIf="isUserLoggedIn" (click)="logout()">Logout</button>
+</mat-toolbar>
+<div style="margin:5px;"></div>
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+<div style="margin:auto;width:80%;height:90%">
+    <div style="margin:0 auto;width:90%;text-align:Center">
+        <button mat-raised-button color="primary" (click)="getReport()">Show Report</button> &nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="getReporstStatus()">Show Report Status</button>
+    </div>
+    <br/>
+    <div style="width:90%;text-align: center;">
+        {{reporstStatus}}
+    </div>
+    <div *ngIf="pdfUrl">
+        <mat-card>
+            <mat-card-content>
+                <object [data]="pdfUrl" type="application/pdf" style="min-height: 100vh;width: 100%;">
+                </object>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
